@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Code Cheeckout') {
+        stage('Code Checkout') {
             steps {
-                sh 'echo "code checked out successfully"
+                sh 'echo "Code checked out successfully"'
             }
         }
 
         stage('Code Build') {
             steps {
-                sh 'echo "Code Build successfully!"'
+                sh 'echo "Code build successfully!"'
             }
         }
     }
