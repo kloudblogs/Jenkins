@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Code Checkout') {
+        stage('Code checkout') {
             steps {
-                sh 'echo "Code checked out successfully"'
+                sh 'echo "Code checked out successfully!"'
             }
         }
 
@@ -13,14 +13,11 @@ pipeline {
                 sh 'echo "Code build successfully!"'
             }
         }
-    }
 
-    post {
-        success {
-            echo 'Pipeline execution completed successfully!'
-        }
-        failure {
-            echo 'Pipeline execution failed!'
+        stage('Code Deploy') {
+            steps {
+                sh 'echo "Code deployed successfully!"'
+            }
         }
     }
 }
